@@ -19,11 +19,13 @@ var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
 var box4 = document.getElementById("box4");
 var box5 = document.getElementById("box5");
+var box6 = document.getElementById("box6");
 
 // Récupérer les boîtes modales
 var py = document.getElementById("py");
 var c = document.getElementById("c");
 var html = document.getElementById("html");
+var thales = document.getElementById("thales");
 var routeur = document.getElementById("routeur");
 var reseaux = document.getElementById("reseaux");
 
@@ -31,6 +33,7 @@ var reseaux = document.getElementById("reseaux");
 var spanPy = py.getElementsByClassName("close")[0];
 var spanC = c.getElementsByClassName("close")[0];
 var spanHtml = html.getElementsByClassName("close")[0];
+var spanThales = thales.getElementsByClassName("close")[0];
 var spanRouteur = routeur.getElementsByClassName("close")[0];
 var spanReseaux = reseaux.getElementsByClassName("close")[0];
 
@@ -48,10 +51,14 @@ box3.addEventListener("click", function() {
 });
 
 box4.addEventListener("click", function() {
-  routeur.style.display = "block";
+  thales.style.display = "block";
 });
 
 box5.addEventListener("click", function() {
+  routeur.style.display = "block";
+});
+
+box6.addEventListener("click", function() {
   reseaux.style.display = "block";
 });
 
@@ -66,6 +73,10 @@ spanC.addEventListener("click", function() {
 
 spanHtml.addEventListener("click", function() {
   html.style.display = "none";
+});
+
+spanThales.addEventListener("click", function() {
+  thales.style.display = "none";
 });
 
 spanRouteur.addEventListener("click", function() {
@@ -88,6 +99,10 @@ window.addEventListener("click", function(event) {
 
   if (event.target == html) {
     html.style.display = "none";
+  }
+
+  if (event.target == thales) {
+    thales.style.display = "none";
   }
 
   if (event.target == routeur) {
