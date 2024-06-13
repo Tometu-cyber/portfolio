@@ -162,7 +162,7 @@ body {
 
 #sectportfolio {
   align-items: center;
-  background: #cce4ff;
+  background: rgb(204, 228, 255);
   display: flex;
   flex-direction: column;
   padding-bottom: 10rem;
@@ -446,6 +446,11 @@ footer {
   transition: scale 1s ease;
 }
 
+.item span{
+  text-decoration: none;
+  color: black;
+}
+
 .item:hover .normal::before {
   scale: 1 1;
 }
@@ -470,6 +475,9 @@ footer {
 }
 .item:nth-child(3) {
   --bg-color: linear-gradient(to bottom, rgba(60,120,235), rgba(90,190,245));
+}
+.item:nth-child(4) {
+  --bg-color: linear-gradient(to bottom, rgb(235, 60, 60), rgba(235, 60, 60, 0.537));
 }
 
 @media (min-width: 1400px){
