@@ -161,6 +161,7 @@ body {
 }
 
 #sectportfolio {
+  align-items: center;
   background: #cce4ff;
   display: flex;
   flex-direction: column;
@@ -169,11 +170,21 @@ body {
 
 #titre-port{
   font-family: Oswald, sans-serif;
-  padding-bottom: 10rem;
+  padding-bottom: 2rem;
   padding-top: 1rem;
   /* text-decoration: underline; */
   font-size: 6vw;
   text-align: center;
+}
+
+#acc-port {
+  text-align: center;
+  font-size: 18px;
+  max-width: 60%;
+  background: rgba(110, 110, 110, 0.65);
+  padding: 20px;
+  margin-bottom: 8rem;
+  animation: fadeInUp 0.5s forwards ease-in-out;
 }
 
 .ligne {
@@ -196,13 +207,19 @@ body {
   transition: transform 0.3s ease-in-out,  color 0.5s, font-size 0.5s, border-radius 0.5s, box-shadow 0.5s;
 }
 
+.h1-portfolio{
+  border-radius: 12px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
 .box:hover{
   transform: scale(1.05);
   color: rgb(255, 255, 255);
   font-size: 2vw;
-  /* text-transform: uppercase; */
-  /* border-radius: 70px; */
-  /* box-shadow: 35px 35px 50px 10px rgba(0, 0, 0,0.8); */
+  .h1-portfolio{
+    background-color: rgba(0, 0, 0, 0.50);
+  }
 }
 
 #box1{
@@ -230,27 +247,27 @@ body {
 }
 
 #box1:hover{
-  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url(image/img_py2.jpeg);
+  background-image:linear-gradient(rgba(13,153,218,0.48), rgba(0,0,0,0.8)), url(image/img_py2.jpeg);
 }
 
 #box2:hover{
-  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url(image/img_C.jpg);
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/img_C.jpg);
 }
 
 #box3:hover{
-  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url(image/img.jpg);
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/img.jpg);
 }
 
 #box4:hover{
-  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url(image/thales.png);
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/thales.png);
 }
 
 #box5:hover{
-  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url(image/routeur.jpg);
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/routeur.jpg);
 }
 
 #box6:hover{
-  background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url(image/reseau.jpg);
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/reseau.jpg);
 }
 
 /* Styles pour la boîte modale */
