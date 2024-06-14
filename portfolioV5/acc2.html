@@ -14,13 +14,11 @@
 <body>
   <nav class="navbar">
     <ul>
-      <li><a class="link" href="#sect2">À propos</a></li>
-      <li><a class="link" href="#sectportfolio">Portfolio</a></li>
-      <li><a class="link" href="passions.html">Mes Passions</a></li>
-      <!-- <li><a class="link" href="#">Compétences</a></li>
-      <li><a class="link" href="#">Diplômes</a></li> -->
-      <li><a class="link" href="#MECONTACTER">Me contacter</a></li>
-      <li><a class="link" href="CV_COURGENAY_TOM_V3_etu.pdf" target="_blank">Mon CV</a></li>
+      <li><a class="link" href="#sect2">À Propos</a></li>
+      <li><a class="link" href="#sectportfolio">Mon Portfolio</a></li>
+      <li><a class="link" href="#sectpassions">Mes Passions</a></li>
+      <li><a class="link" href="#MECONTACTER">Me Contacter</a></li>
+      <li><a class="link" href="CV_COURGENAY_TOM_V3_etu.pdf" download=""">Mon CV</a></li>
     </ul>
   </nav>
   <button class="menu-btn">
@@ -35,12 +33,7 @@
             <div class="center">
               <h1 class="big-w">Bienvenue</h1>
               <div class="resume-wrap2">
-                <p>Bienvenue sur mon portfolio ! Je m'appelle Tom, je suis un étudiant de 18 ans. 
-                Je prépare actuellement un BUT en Réseaux et Télécommunications à l'IUT de Nice Côte d'Azur. 
-                Passionné par l'informatique depuis toujours, je prévois d'approfondir mes connaissances dans ce domaine l'année prochaine.
-                Pour y parvenir je compte continuer de me former dans divers langage de programatoin et en apprendre plus sur la cybersécurité.
-                Si vous souhaitez en savoir plus sur mes compétences ou ma personnalité, je vous invite à explorer ce site pour découvrir mes projets et mon parcours académique. <br> 
-                Bonne visite ! ! !</p>
+                <p>Bienvenue sur mon portfolio ! Je m'appelle Tom, je suis un étudiant de 18 ans en BUT Réseaux et Télécommunications à l'IUT de Nice Côte d'Azur. Passionné par l'informatique depuis toujours, je prévois d'approfondir mes connaissances l'année prochaine en continuant de me former dans divers langages de programmation et en cybersécurité. Je vous invite à explorer ce site pour découvrir mes projets et mon parcours académique. <br> Bonne visite !!!</p>
               </div>
             </div>
           </div>
@@ -80,7 +73,7 @@
         <h1 class="h1-portfolio">Python</h1>
       </div>
       <div id="box2" class="box">
-        <h1 class="h1-portfolio">Language C</h1>
+        <h1 class="h1-portfolio">Langage C</h1>
       </div>
       <div id="box3" class="box">
         <h1 class="h1-portfolio">Html/Css/Js</h1>
@@ -105,7 +98,7 @@
       </button>
       <div class="left-content">
         <h1 >Python</h1>
-        <p>J’ai réalisé ce programme Python durant le lycée, il permet de crée un pierre-feuille-ciseau entre un joueur et un ordinateur sans utilisation d’interface graphihque. C’est-à-dire que tout ce passe dans la console. Le lancement de la partit ce fait avec un appel de la fonction "jeu" qui a besoin en paramètre du nombre de points nécessaire pour gagner. Le programme est divisé en plusieurs fonctions qui une fois assemblé permettent de jouer. <br> <br>
+        <p class="texte-modal">J’ai réalisé ce programme Python durant le lycée, il permet de crée un pierre-feuille-ciseau entre un joueur et un ordinateur sans utilisation d’interface graphihque. C’est-à-dire que tout ce passe dans la console. Le lancement de la partit ce fait avec un appel de la fonction "jeu" qui a besoin en paramètre du nombre de points nécessaire pour gagner. Le programme est divisé en plusieurs fonctions qui une fois assemblé permettent de jouer. <br> <br>
 
           Pour expliquer simplement le fonctionnement, on demande au joueur son choix (Pierre-Feuille-Ciseau), le choix de l’ordi est fait de manèire aléatoire avec un randint. Ensuite, il y a une fonction qui réalise des tests pour déterminer le gagnant. Tant qu’aucun des deux joueur n’a atteint le nombre de point nécessaire pour gagner, le programme continue de lancer des manches.
         </p>
@@ -181,8 +174,8 @@ jeu(3)
         <i class="fa-solid fa-xmark "></i>
       </button>
       <div class="left-content">
-        <h1 >C</h1>
-        <p>Au cours de ma première année de BUT, j'ai conçu ce programme en langage C qui permet de convertir un nombre décimal compris entre 0 et 255. <br> <br>
+        <h1>Langage C</h1>
+        <p class="texte-modal">Au cours de ma première année de BUT, j'ai conçu ce programme en langage C qui permet de convertir un nombre décimal compris entre 0 et 255. <br> <br>
 
           Pour expliquer de manière concise son fonctionnement, l'utilisateur saisit la valeur à convertir. Le programme procède ensuite à une vérification pour s'assurer que la valeur se situe bien entre 0 et 255. Si c'est le cas, une boucle 'for' est utilisée pour attribuer les valeurs 0 ou 1 à une liste de 8 éléments, chacun représentant un bit de la conversion binaire. 
           Enfin, une boucle 'while' est utilisée pour afficher les valeurs de la liste dans l'ordre inverse, ce qui représente le nombre binaire dans le bon ordre.
@@ -259,7 +252,7 @@ int main() {
       <div class="right-content">
         <pre><code>  
         </code></pre>
-        <video controls autoplay loop src="video/video1.mov" class="video"></video>
+        <video controls autoplay loop src="video/video1.mo" class="video"></video>
       </div>
     </div>
   </div>
@@ -384,18 +377,59 @@ end
       </button>
       <div class="left-content">
         <h1 >Réseau</h1>
-        <p>J’ai réalisé ce programme Python durant le lycée, il permet de crée un pierre-feuille-ciseau entre un joueur et un ordinateur sans utilisation d’interface graphihque. C’est-à-dire que tout ce passe dans la console. Le lancement de la partit ce fait avec un appel de la fonction "jeu" qui a besoin en paramètre du nombre de points nécessaire pour gagner. Le programme est divisé en plusieurs fonctions qui une fois assemblé permettent de jouer. <br> <br>
+        <p>
+          Pendant ma première année au sein du BUT Réseaux et Télécommunications, j'ai acquis des compétences solides en réseaux, en commençant par utiliser Packet Tracer pour simuler des topologies et comprendre les concepts de base, avant de passer à une pratique concrète sur des équipements Cisco. <br><br>
 
-          Pour expliquer simplement le fonctionnement, on demande au joueur son choix (Pierre-Feuille-Ciseau), le choix de l’ordi est fait de manèire aléatoire avec un randint. Ensuite, il y a une fonction qui réalise des tests pour déterminer le gagnant. Tant qu’aucun des deux joueur n’a atteint le nombre de point nécessaire pour gagner, le programme continue de lancer des manches.
+          Je suis capable de choisir le bon type de câble entre différents équipements et définir des plages d'adresses IP en fonction des besoins du réseaux. Je peux aussi configurer des serveurs DHCP pour attribuer des adresses IP automatiquement. <br>
+
+          J'ai appris à configurer manuellement les adresses IP, les masques de sous-réseau, les passerelles par défaut et les serveurs DNS sur les machines. <br><br> Voici un exemple de configuration que je peux mettre en place sous Packet Tracer.
         </p>
       </div>
       <div class="right-content">
         <pre><code>          
         </code></pre>
-        <video controls autoplay loop src="video/video1.mov" class="video"></video>
+        <video controls autoplay loop src="video/reseaux.mov" class="video"></video>
       </div>
     </div>
   </div>
+  <section id="sectpassions">
+    <h1>Mes Passions</h1>
+    <div class="ligne-pass">
+      <img src="image/imgwake2.jpg" alt="Le Wakeboard">
+      <div class="texte">
+        <h2>Le Wakeboard</h2>
+        <br>
+        <p>Le wakeboard est l'un des nombreux sports nautiques que je pratique. Je monte sur des planches depuis environ l'âge de 10 ans. C'est un sport que je pratique aussi bien sur un lac qu'en mer, tracté par un bateau. Il m'apporte une sensation extraordinaire de liberté. Chaque sortie est une nouvelle occasion de passé une journée de folie avec des amis.</p>
+      </div>
+    </div>
+    <div class="ligne-pass">
+      <div class="texte">
+        <h2>Le Drone</h2>
+        <br>
+        <p>Le pilotage de drones est l'une de mes passions les plus récentes. Je me suis lancé dans cette aventure il y a peu, fasciné par la technologie j'ai décidé de commencer cette discipline pour pouvoir faire de belles images quand les occasions se montrent. 
+          <br>Que ce soit pour capturer des images époustouflantes depuis le ciel ou simplement pour le plaisir de voler. Chaque vol me fait découvrir des paysages sous un nouvel angle et d'immortaliser des moments inoubliables avec des amis.
+        </p>
+      </div>
+      <img src="image/drone.JPEG" alt="Le DRONE">
+    </div>
+    <div class="ligne-pass">
+      <img src="image/ski.JPG" alt="Le SKI" style="width: 400px;">
+      <div class="texte">
+        <h2>Le Ski</h2>
+        <br>
+        <p>Le ski est l'un des nombreux sports d'hiver que je pratique. Je skie depuis aussi loin que je me souvienne, et chaque saison, je continue de me perfectionner tout en profitant des montagnes. Que ce soit sur les pistes ou pas, chaque descente me procure une sensation indescriptible de légèreté. 
+          <br>Chaque séjour à la montagne est une nouvelle occasion de passer des journées inoubliables avec des amis ou de la famille, entre les descentes à toute vitesse et les moments de détente au chalet.</p>
+      </div>
+    </div>
+    <div class="ligne-pass">
+      <div class="texte">
+        <h2>Le Bureau Des Elèves</h2>
+        <br>
+        <p>Depuis très récemment, j'ai rejoint le Bureau des élèves de mon BUT, le BDE R&T, en tant que président. C'est une expérience enrichissante qui me permet non seulement de faire régulièrement des rencontres, mais aussi de m'investir pleinement dans l'organisation d'événements pour nos étudiants, que ce soit sur le campus ou ailleurs. 
+          <br>Cette responsabilité me pousse à être créatif et à développer mes compétences pour gérer l'association tout au long de mon mandat.</p>
+      </div>
+      <img src="image/BDE2.png" alt="Le BDE">
+  </section>
   <footer id="MECONTACTER">
     <div class="footer-wrapper">
       <div class="footer-section">
