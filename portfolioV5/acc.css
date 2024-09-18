@@ -152,7 +152,7 @@ body {
   margin-top: 0;
 }
 
-.resume-wrap .position{
+.resume-wrap .position, #sect_alt h4{
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -160,9 +160,38 @@ body {
   color: #2a5e99;
 }
 
+#sect_alt{
+  background: rgb(204, 228, 255);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+#titre-alt{
+  font-family: Oswald, sans-serif;
+  padding-top: 1rem;
+  font-size: 6vw;
+  text-align: center;
+}
+
+#sect_alt h4{
+  font-size: 17px;
+}
+
+#acc-alt {
+  text-align: center;
+  font-size: 18px;
+  max-width: 60%;
+  background: rgba(110, 110, 110, 0.65);
+  padding: 20px;
+  margin-block: 2rem;
+  animation: fadeInUp 0.5s forwards ease-in-out;
+}
+
 #sectportfolio {
   align-items: center;
-  background: rgb(204, 228, 255);
+  /* background: rgb(204, 228, 255); */
   display: flex;
   flex-direction: column;
   padding-bottom: 5rem;
@@ -351,6 +380,7 @@ body {
 }
 
 #sectpassions{
+  background: rgb(204, 228, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -399,7 +429,7 @@ body {
 footer {
   background: rgba(197, 224, 255, 0.7);
   width: 100%;
-  margin-top: 2vw;
+  padding-top: 2vw;
   padding: 0.5rem clamp(3rem, 6vw, 14rem);
 }
 
@@ -548,7 +578,8 @@ footer {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/img.jpg') center/cover no-repeat;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/img.jpg') center/cover no-repeat; */
+    background: linear-gradient(rgba(44, 55, 68, 0.95), rgba(75, 117, 165, 0.95));
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.5s ease-in-out;
     z-index: 2;
