@@ -272,6 +272,10 @@ body {
   background-image:linear-gradient(rgba(13,153,218,0.4), rgba(0,0,0,0.8)), url(image/reseau.jpg);
 }
 
+#box7{
+  background-image:linear-gradient(rgba(13,153,218,0.4), rgba(0,0,0,0.8)), url(image/reseau.jpg);
+}
+
 #box1:hover{
   background-image:linear-gradient(rgba(13,153,218,0.48), rgba(0,0,0,0.8)), url(image/img_py2.jpeg);
 }
@@ -293,6 +297,10 @@ body {
 }
 
 #box6:hover{
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/reseau.jpg);
+}
+
+#box7:hover{
   background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/reseau.jpg);
 }
 
@@ -664,7 +672,8 @@ footer {
   #box3:hover,
   #box4:hover,
   #box5:hover,
-  #box6:hover{
+  #box6:hover,
+  #box7:hover{
     font-size: 5vw;
     /* border-radius: 50px; */
   }
@@ -686,7 +695,8 @@ footer {
   #box3:hover,
   #box4:hover,
   #box5:hover,
-  #box6:hover{
+  #box6:hover,
+  #box7:hover{
     font-size: 4.5vw;
   }
 

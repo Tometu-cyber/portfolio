@@ -20,6 +20,7 @@ var box3 = document.getElementById("box3");
 var box4 = document.getElementById("box4");
 var box5 = document.getElementById("box5");
 var box6 = document.getElementById("box6");
+var box7 = document.getElementById("box7");
 
 // Récupérer les boîtes modales
 var py = document.getElementById("py");
@@ -28,6 +29,7 @@ var html = document.getElementById("html");
 var thales = document.getElementById("thales");
 var routeur = document.getElementById("routeur");
 var reseaux = document.getElementById("reseaux");
+var bdd = document.getElementById("bdd");
 
 // Récupérer les boutons de fermeture
 var spanPy = py.getElementsByClassName("close")[0];
@@ -36,6 +38,7 @@ var spanHtml = html.getElementsByClassName("close")[0];
 var spanThales = thales.getElementsByClassName("close")[0];
 var spanRouteur = routeur.getElementsByClassName("close")[0];
 var spanReseaux = reseaux.getElementsByClassName("close")[0];
+var spanBdd = bdd.getElementsByClassName("close")[0];
 
 // Ajouter des gestionnaires d'événements de clic pour chaque boîte
 box1.addEventListener("click", function() {
@@ -60,6 +63,10 @@ box5.addEventListener("click", function() {
 
 box6.addEventListener("click", function() {
   reseaux.style.display = "block";
+});
+
+box7.addEventListener("click", function() {
+  bdd.style.display = "block";
 });
 
 // Ajouter des gestionnaires d'événements de clic pour chaque bouton de fermeture
@@ -87,6 +94,10 @@ spanReseaux.addEventListener("click", function() {
   reseaux.style.display = "none";
 });
 
+spanBdd.addEventListener("click", function() {
+  bdd.style.display = "none";
+});
+
 // Fermer la boîte modale si l'utilisateur clique en dehors de celle-ci
 window.addEventListener("click", function(event) {
   if (event.target == py) {
@@ -111,5 +122,9 @@ window.addEventListener("click", function(event) {
 
   if (event.target == reseaux) {
     reseaux.style.display = "none";
+  }
+
+  if (event.target == bdd) {
+    bdd.style.display = "none";
   }
 });
