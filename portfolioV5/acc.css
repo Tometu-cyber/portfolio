@@ -273,7 +273,7 @@ body {
 }
 
 #box7{
-  background-image:linear-gradient(rgba(13,153,218,0.4), rgba(0,0,0,0.8)), url(image/reseau.jpg);
+  background-image:linear-gradient(rgba(13,153,218,0.4), rgba(0,0,0,0.8)), url(image/graphana.jpeg);
 }
 
 #box1:hover{
@@ -301,7 +301,7 @@ body {
 }
 
 #box7:hover{
-  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/reseau.jpg);
+  background-image:linear-gradient(rgba(13,153,218,0.48),rgba(0, 0, 0, 0.6)), url(image/graphana.jpeg);
 }
 
 /* Styles pour la boîte modale */
