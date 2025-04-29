@@ -133,7 +133,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.5)), url('image/myMontagne.PNG');
+    background-image: linear-gradient(rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.5)), url('image/myMontagne.png');
     /* background-image: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('/api/placeholder/1200/800'); */
     background-size: cover;
     background-position: center;
