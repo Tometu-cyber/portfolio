@@ -189,6 +189,11 @@ body {
   animation: fadeInUp 0.5s forwards ease-in-out;
 }
 
+#ul-alt{
+  margin-inline: 3rem;
+  margin-top: 1rem;
+}
+
 #sectportfolio {
   align-items: center;
   /* background: rgb(204, 228, 255); */
