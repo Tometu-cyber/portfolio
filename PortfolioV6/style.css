@@ -136,7 +136,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.5)), url('image/myMontagne.PNG');
+    background-image: linear-gradient(rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.5)), url('image/myMontagne.png');
     background-size: cover;
     background-position: center;
 }
