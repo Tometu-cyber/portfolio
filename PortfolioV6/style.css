@@ -1,3 +1,5 @@
+/* ------------------------------ Main css ------------------------------ */
+
 :root {
     --primary-color: #0a192f;
     --secondary-color: #172a45;
@@ -6,6 +8,7 @@
     /* --text-color-secondary: #8892b0; */
     --text-color-secondary: #ffffff;
     --transition: all 0.8s ease;
+    --opacity: 0.5;
 }
 
 * {
@@ -128,13 +131,12 @@ header {
     margin-bottom: 10px;
 }
 
-/* Hero Section */
+/* ------------------------------ Home Section ------------------------------ */
 #home {
     display: flex;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.5)), url('image/myMontagne.png');
-    /* background-image: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('/api/placeholder/1200/800'); */
+    background-image: linear-gradient(rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.5)), url('image/myMontagne.PNG');
     background-size: cover;
     background-position: center;
 }
@@ -194,7 +196,7 @@ header {
     transform: translateY(-3px);
 }
 
-/* About Section */
+/* ------------------------------ About Section ------------------------------ */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -305,7 +307,6 @@ header {
     transition: var(--transition);
 }
 
-/* S’assurer que le contenu passe par-dessus l’overlay */
 .project-content {
     position: relative;
     z-index: 2;
@@ -390,7 +391,65 @@ header {
     color: var(--accent-color);
 }
 
-/* Passions Section */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal-content {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+#modalContent pre {
+    font-family: Consolas, Monaco, 'Courier New', monospace;
+}
+
+#modalContent pre, #modalContent div {
+    text-align: left;
+    background-color: var(--secondary-color);
+    color: var(--text-color-secondary);
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap; 
+    word-break: break-word;
+    margin: 20px 0;
+    max-height: inherit;
+}
+
+#modalContent {
+    max-height: 70vh;
+}
+
+#modalContent pre code{
+    overflow-y: auto;
+}
+
+/* ------------------------------ Passions Section ------------------------------ */
 .passions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -437,7 +496,7 @@ header {
     color: var(--text-color-secondary);
 }
 
-/* Contact Section */
+/* ------------------------------ Contact Section ------------------------------ */
 .contact-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -518,7 +577,7 @@ textarea.form-control {
     min-height: 150px;
 }
 
-/* Footer */
+/* ------------------------------ Footer Section ------------------------------ */
 footer {
     background-color: var(--secondary-color);
     padding: 25px 0;
@@ -555,7 +614,7 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive Styles */
+/* ------------------------------ Responsive Styles ------------------------------ */
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
