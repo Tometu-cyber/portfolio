@@ -7,7 +7,7 @@
     --text-color: #ccd6f6;
     /* --text-color-secondary: #8892b0; */
     --text-color-secondary: #ffffff;
-    --transition: all 0.8s ease;
+    --transition: all 0.5s ease;
     --opacity: 0.5;
 }
 
@@ -213,7 +213,7 @@ header {
 }
 
 .about-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -234,12 +234,12 @@ header {
     color: var(--text-color-secondary);
 }
 
-/* Alternance Section */
+/* ------------------------------ Alternance Section ------------------------------ */
 .alternance-content {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
 }
 
 .alternance-title {
@@ -253,6 +253,124 @@ header {
     font-weight: 600;
     margin-bottom: 25px;
     color: var(--accent-color);
+}
+
+.alternance-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.company-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.company-name {
+    margin: 10px 0;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.tagline {
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.profile-overview {
+    flex: 2;
+    min-width: 300px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.role-description {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.role-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.mission-card {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mission-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.mission-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.mission-card p {
+    color: var(--text-color-secondary);
+    line-height: 1.5;
+}
+
+.skills-conclusion {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    color: var(--text-color-secondary);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.skill-tag {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.conclusion-text {
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.6;
 }
 
 .alternance-description {
@@ -313,7 +431,7 @@ header {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -334,6 +452,11 @@ header {
     background-color: var(--accent-color);
     opacity: 0.2;
     transition: opacity 0.3s ease;
+}
+
+.img-filter img {
+    width: 100%;
+    height: auto;
 }
 
 .project-card:hover .img-filter::after {
@@ -383,12 +506,17 @@ header {
 
 .project-links a {
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 15px;
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .project-links a:hover {
     color: var(--accent-color);
+}
+
+.btn-code, .btn-info {
+    font-size: 20px;
 }
 
 .modal {
@@ -465,7 +593,7 @@ header {
 }
 
 .passion-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -654,5 +782,18 @@ footer {
 
     .section-title {
         font-size: 28px;
+    }
+
+    .alternance-header {
+        flex-direction: column;
+    }
+    
+    .profile-overview {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    
+    .missions-grid {
+        grid-template-columns: 1fr;
     }
 }
