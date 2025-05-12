@@ -786,6 +786,10 @@ footer {
         font-size: 22px;
     }
 
+    .hero-description {
+        text-align: start;
+    }
+
     .section-title {
         font-size: 28px;
     }
