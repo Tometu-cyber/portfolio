@@ -182,7 +182,7 @@
                                 <span class="tech-badge">Python</span>
                             </div>
                             <div class="project-links" id="links-Python">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <!-- <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a> -->
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                         </div>
@@ -191,67 +191,6 @@ J’ai réalisé ce programme Python durant le lycée, il permet de créer un pi
 <br>
 Pour expliquer simplement le fonctionnement, on demande au joueur son choix (Pierre-Feuille-Ciseau), le choix de l’ordi est fait de manière aléatoire avec un randint. Ensuite, il y a une fonction qui réalise des tests pour déterminer le gagnant. Tant qu’aucun des deux joueurs n’a atteint le nombre de points nécessaires pour gagner, le programme continue de lancer des manches.
                         </div>
-                        <pre class="Code" id="CodePython">
-                            <code>
-from random import randint
-
-points = [0, 0]
-
-def afficher(texte: str):
-    print(texte)
-
-def saisir():
-    """demande choisir entre 0:pierre, 1:feuille, 2:ciseaux"""
-    console = int(input("FAIT TON CHOIX\n 0 pour pierre \n 1 pour feuille \n 2 pour ciseaux \n\n mon choix:"))
-    return console
-
-def manche():
-    """choix joueur vs choix ordi"""
-    
-    joueur = saisir()
-    ordi = randint(0, 2)
-    reponse = (joueur, ordi)
-    LesChoix = ("pierre", "feuille", "ciseaux")
-    afficher(f"joueur: {LesChoix[joueur]} VS ordi: {LesChoix[ordi]}")
-    if reponse[0] == 0 and reponse[1] == 0:
-        print("Egalité")
-    if reponse[0] == 1 and reponse[1] == 1:
-        print("Egalité")
-    if reponse[0] == 2 and reponse[1] == 2:
-        print("Egalité")
-    if reponse[0] == 1 and reponse[1] == 0:
-        print("joueur gagne")
-        points[0] += 1
-    if reponse[0] == 2 and reponse[1] == 0:
-        print("ordi gagne")
-        points[1] += 1
-    if reponse[0] == 0 and reponse[1] == 1:
-        print("ordi gagne")
-        points[1] += 1
-    if reponse[0] == 0 and reponse[1] == 2:
-        print("ordi gagne")
-        points[1] += 1
-    if reponse[0] == 1 and reponse[1] == 2:
-        print("joueur gagne")
-        points[0] += 1
-    if reponse[0] == 2 and reponse[1] == 1:
-        print("joueur gagne")
-        points[0] += 1
-    print(points)
-    return points
-
-def jeu(gagne: int):
-    """affiche les résultats de manche quand joueur ou ordi gagne"""
-    while points[0] < 3 and points[1] < 3:
-        manche()
-    if points[0] == 3:
-        print("\n \n \n JOUEUR GAGNE LA PARTIE")
-    if points[1] == 3:
-        print("\n \n \n ORDI GAGNE LA PARTIE")
-
-jeu(3)
-                            </code>
-                        </pre>
                     </div>
 
                     <!-- Routeur et Switch -->
@@ -269,7 +208,7 @@ jeu(3)
                                 <span class="tech-badge">Réseaux</span>
                             </div>
                             <div class="project-links" id="links-Routeur/Switch">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <!-- <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a> -->
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                         </div>
@@ -280,103 +219,6 @@ J'ai débuté par la configuration du routage, en apprenant à mettre en place d
 <br>
 Voici un exemple basique de configuration que je peux mettre en place sur un routeur.
                         </div>
-                        <pre class="Code" id="CodeRouteur/Switch">
-                            <code>
-version 12.4
-no service timestamps log datetime msec
-no service timestamps debug datetime msec
-no service password-encryption
-!
-hostname Ra
-!
-!
-!
-!
-!
-!
-!
-!
-no ip cef
-ipv6 unicast-routing
-!
-no ipv6 cef
-!
-ipv6 dhcp pool DHCP1
-    address prefix 2003:DB8:ACDC:1::/64 lifetime 7200 600
-    dns-server 2001:4860:4860::8888
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-!
-interface FastEthernet0/0
-    no ip address
-    duplex auto
-    speed auto
-    ipv6 address 2003:DB8:ACDC:1::1F/64
-    ipv6 nd managed-config-flag
-    ipv6 enable
-    ipv6 ospf 10 area 0
-    ipv6 dhcp server DHCP1
-!
-interface FastEthernet0/1
-    no ip address
-    duplex auto
-    speed auto
-    shutdown
-!
-interface Serial0/0
-    no ip address
-    ipv6 address autoconfig
-    ipv6 enable
-    ipv6 ospf 10 area 0
-    clock rate 2000000
-!
-interface Serial0/1
-    no ip address
-    clock rate 2000000
-    shutdown
-!
-ipv6 router ospf 10
-    router-id 0.0.0.1
-    log-adjacency-changes
-!
-ip classless
-!
-ip flow-export version 9
-!
-!
-!
-!
-!
-!
-!
-!
-line con 0
-!
-line aux 0
-!
-line vty 0 4
-    login
-!
-!
-!
-end
-                            </code>
-                        </pre>
                     </div>
 
                     <!-- Réalisation d'un réseau -->
@@ -401,11 +243,6 @@ end
                         <div class="Info" id="InfoReseaux">
 La formation en Réseaux m’a permis de renforcer considérablement mes compétences en conception, configuration et gestion d’infrastructures réseau. J’ai appris à élaborer des plans d’adressage optimisés, à configurer des services essentiels comme DHCP et NAT, et à garantir la connectivité ainsi que la sécurité des systèmes. Ces bases solides me permettent aujourd’hui d’intervenir efficacement sur des environnements variés, en combinant théorie et mise en pratique.
                         </div>
-                        <pre class="Code" id="CodeReseaux">
-                            <code>
-No code
-                            </code>
-                        </pre>
                     </div>
 
                     <!-- Le langage C -->
@@ -423,7 +260,7 @@ No code
                                 <span class="tech-badge">C</span>
                             </div>
                             <div class="project-links" id="links-C">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <!-- <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a> -->
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                         </div>
@@ -434,40 +271,6 @@ Pour expliquer de manière concise son fonctionnement, l'utilisateur saisit la v
 <br>
 Enfin, une boucle 'while' est utilisée pour afficher les valeurs de la liste dans l'ordre inverse, ce qui représente le nombre binaire dans le bon ordre.              
                         </div>
-                        <pre class="Code" id="CodeC">
-                            <code>
-#include stdio.h>
-#define T 8
-
-int main() {
-    int valeur;
-    int bits[T];
-    int cpt = 0;
-    
-    printf("Valeur? ");
-    scanf("%d", &valeur);
-
-    if (valeur >= 1 << T) {
-        printf("La valeur est trop grande. Veuillez entrer une valeur inférieure à %d\n", 1 << T);
-        return 1; 
-    }
-    printf("La valeur binaire de %d est ", valeur);
-    for (int i = 0; i < T; i++) {
-        bits[i] = valeur % 2;
-        valeur = valeur / 2;
-        cpt += 1;
-    }
-
-    cpt -= 1;
-    while (cpt >= 0) {
-        printf("%d", bits[cpt]);
-        cpt -= 1;
-    }
-
-    return 0;
-}
-                            </code>
-                        </pre>
                     </div>
 
                     <!-- Le projet Thales -->
@@ -486,7 +289,7 @@ int main() {
                                 <span class="tech-badge">SQL</span>
                             </div>
                             <div class="project-links" id="links-Thales">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <a href="#" title="Voir le code"><i data-github-link="https://github.com/Tometu-cyber/SAE15" class="fas fa-code btn-code"></i> Voir le code</a>
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                             <div class="Info" id="InfoThales">
@@ -494,11 +297,6 @@ Ce projet, réalisé en collaboration avec un employé de Thales Alenia Space, c
 <br>
 Ce projet a été particulièrement enrichissant pour moi, car il m'a permis de renforcer mes compétences en travail d'équipe et en développement collaboratif. Pour ce faire, j'ai dû me familiariser avec GitHub, un environnement que je n'avais pas encore utilisé. Bien que je disposais déjà de solides bases dans plusieurs langages, cette expérience m'a permis de progresser significativement, notamment en PHP, SQL et Python. J'ai également appris à intégrer efficacement ces langages pour créer une application web cohérente et fonctionnelle.
                             </div>
-                            <pre class="Code" id="CodeThales">
-                                <code>
-No code
-                                </code>
-                            </pre>
                         </div>
                     </div>
 
@@ -520,17 +318,12 @@ No code
                                 <span class="tech-badge">Grafana</span>
                             </div>
                             <div class="project-links" id="links-Dashboard">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <!-- <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a> -->
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                             <div class="Info" id="InfoDashboard">
 Durant mon alternance chez NEXESS, j'ai eu l'occasion de travailler sur plusieurs projets. L'un d'eux consistait à créer un tableau de bord permettant de traiter et d'afficher des données récupérées sur notre plateforme GLPI (plateforme de gestion d'incidents) sous forme de différents graphiques. Sur ce projet, j'ai été responsable du choix des outils utilisés. J'ai donc utilisé Python pour récupérer les données et les envoyer vers une base de données PostgreSQL. Enfin, pour réaliser l'aspect visuel, j'ai utilisé Grafana.
                             </div>
-                            <pre class="Code" id="CodeDashboard">
-                                <code>
-No code
-                                </code>
-                            </pre>
                         </div>
                     </div>
 
@@ -551,17 +344,12 @@ No code
                                 <span class="tech-badge">JS</span>
                             </div>
                             <div class="project-links" id="links-Portfolio">
-                                <!-- <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a> -->
+                                <a href="#" title="Voir le code"><i data-github-link="https://github.com/Tometu-cyber/portfolio" class="fas fa-code btn-code"></i> Voir le code</a>
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                             <div class="Info" id="InfoPortfolio">
 Description à venir.
                             </div>
-                            <pre class="Code" id="CodePortfolio">
-                                <code>
-No code
-                                </code>
-                            </pre>
                         </div>
                     </div>
 
@@ -581,7 +369,7 @@ No code
                                 <span class="tech-badge">JSON</span>
                             </div>
                             <div class="project-links" id="links-EtuRead">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <a href="#" title="Voir le code"><i data-github-link="https://github.com/Tometu-cyber/EtuReadPdf" class="fas fa-code btn-code"></i> Voir le code</a>
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                             <div class="Info" id="InfoEtuRead">
@@ -591,106 +379,6 @@ Le script lit les métadonnées des fichiers PDF, filtre le contenu en suppriman
 <br>
 Ce projet m'a permis de renforcer mes compétences en manipulation de fichiers PDF, en traitement de texte avec des expressions régulières, et en génération de données structurées pour un usage ultérieur.
                             </div>
-                            <pre class="Code" id="CodeEtuRead">
-                                <code>
-#! /usr/bin/python3
-
-import PyPDF2
-import json
-import re
-
-class EtuRead:
-    """
-    Class pour lire les pdf de intracursus
-    """
-    
-    def __init__(self, file_path):
-        """
-        Init de la classe EtuRead
-        
-        :param file_path: Chemin du PDF
-        """
-        self.file_path = file_path
-
-    def get_metadata(self):
-        """
-        Extracts metadata from a PDF file.
-        
-        :param file_path: Path to the PDF file
-        :return: Metadata of the PDF file
-        """
-        with open(self.file_path, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
-            metadata = reader.metadata
-        return metadata
-    # print(get_metadata('test.pdf'))
-
-    def read_pdf(self):
-        """
-        Reads a PDF file, removes lines containing 'Page' or 'Université' (case-insensitive),
-        and returns the cleaned text content.
-        
-        :return: Cleaned text content of the PDF
-        """
-        with open(self.file_path, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
-            text = ''
-            for page in reader.pages:
-                page_text = page.extract_text()
-                if page_text:
-                    # Supprime les lignes contenant "Page" ou "Université" (insensible à la casse)
-                    filtered_lines = [
-                        line for line in page_text.splitlines()
-                        if not ("page" in line.lower() or "université" in line.lower())
-                    ]
-                    text += '\n'.join(filtered_lines) + '\n'
-        return text.strip()
-    
-    def ECUE_UE(self):
-        t = self.read_pdf()
-        ECUE = t.split("Code ECUE")
-        ECUE.pop(0)
-        UE = ECUE[-1].split("Code UE")
-        ECUE[-1] = UE[0]
-        UE.pop(0)
-        UE[-1] = "\n".join(element for element in UE[-1].split("\n")[:-1])
-        return ECUE, UE
-    
-    def getECUE(self):
-        return self.ECUE_UE()[0]
-    
-    def getUE(self):
-        return self.ECUE_UE()[1]
-    
-    def export_note(self):
-        allECUE = self.getECUE()
-        dicoNote = []
-        for matiere in allECUE:
-            tmp = {}
-            noteCoeff=[]
-            matiere = matiere.split("\n")
-            tmp["name"] = matiere[0]
-            for i in matiere[-2].split("\n"):
-                patternNote = r'\d{1,2}\.\d{3}\ '
-                patternCoeff = r'\d{1,2}\.\d{4}'
-                notes = re.findall(patternNote,i)
-                coeff = re.findall(patternCoeff,i)
-                for ele in range(len(notes)):
-                    tmpnote = {}
-                    tmpnote["note"] = float(notes[ele])
-                    tmpnote["coeff"] = float(coeff[ele])
-                    noteCoeff.append(tmpnote)
-            tmp["notes"] = noteCoeff
-            if "Moyenne" not in matiere[1].split(" - ")[0]:
-                tmp["moyennepdf"] = ""
-            else:
-                tmp["moyennepdf"] = float(matiere[1].split(" - ")[0].split("Moyenne : ")[1])
-            dicoNote.append(tmp)
-        with open("exportNote.json", "w", encoding="utf-8") as fic:
-            json.dump(dicoNote, fic, indent=4, ensure_ascii=False)
-        return dicoNote
-                                </code>
-                            </pre>
                         </div>
                     </div>
 
@@ -710,7 +398,7 @@ class EtuRead:
                                 <span class="tech-badge">CSS</span>
                             </div>
                             <div class="project-links" id="links-EtuWeb">
-                                <a href="#" title="Voir le code"><i class="fas fa-code btn-code"></i> Voir le code</a>
+                                <a href="#" title="Voir le code"><i data-github-link="" class="fas fa-code btn-code"></i> Voir le code</a>
                                 <a href="#" title="Voir le projet"><i class="fas fa-external-link-alt btn-info"></i> Voir plus</a>
                             </div>
                             <div class="Info" id="InfoEtuWeb">
@@ -720,11 +408,6 @@ Grâce à une interface responsive développée avec Tailwind CSS, les utilisate
 <br>
 Ce projet met l’accent sur l’ergonomie, la clarté visuelle et l’accessibilité, afin de proposer une expérience fluide, tant sur ordinateur que sur mobile.
                             </div>
-                            <pre class="Code" id="CodeEtuWeb">
-                                <code>
-Code à venit
-                                </code>
-                            </pre>
                         </div>
                     </div>
 
