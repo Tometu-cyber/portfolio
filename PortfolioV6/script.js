@@ -53,3 +53,31 @@ window.addEventListener('click', event => {
 
 // Cacher les contenus dans les cartes
 document.querySelectorAll('.Info, .Code').forEach(el => el.style.display = 'none');
+
+// Gestion du menu mobile
+const hamburger = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Optionnel : changer l'icône du hamburger
+    const icon = hamburger.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// Fermer le menu mobile quand on clique sur un lien
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = hamburger.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+});
